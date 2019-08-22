@@ -1,0 +1,662 @@
+{
+	"id": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+	"name": "Kafka Topics Rest API",
+	"description": "",
+	"order": [
+		"6fe0e544-3d49-96ae-6092-664ffa640e67",
+		"a4bb2875-1c58-b2e3-ab99-0755a60031ac",
+		"3a3fabd8-297e-e8bf-f95a-f5a99146dd6a",
+		"831c3032-4bcb-1478-7ce8-74158a088d07",
+		"af40ab39-0400-e306-cd45-5c52086f3d3c",
+		"0ddfb117-adbf-e6bd-938b-8ed109c7692f",
+		"8f6adb7f-289d-9336-189d-ee4889dbd009",
+		"75defb4e-a86b-12f0-fc20-d5e485e7dc81",
+		"f3d9895c-2f20-0e6f-9a35-89feaf4ea4b6",
+		"f112053b-4b2b-bd0c-de31-566ed8284101",
+		"3f78b44a-245f-a61a-0523-9e31c36ba80c",
+		"029bd465-7112-68e6-24e4-04750fce2c9e",
+		"4dfd1871-67b7-b7f9-b84b-6b98fc8c253d",
+		"1448de95-5a08-a971-1b90-dded64f51734",
+		"b875a273-5285-94f2-a288-72d587a4949e",
+		"4a71e14d-3606-f89c-71c2-60c6bd77ec7f"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 0,
+	"owner": "7735593",
+	"public": false,
+	"requests": [
+		{
+			"id": "029bd465-7112-68e6-24e4-04750fce2c9e",
+			"name": "Get List of Cluster",
+			"url": "http://{{ip}}:8004",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"collectionId": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"headers": "",
+			"pathVariables": {},
+			"collection_id": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"preRequestScript": "",
+			"tests": ""
+		},
+		{
+			"id": "0ddfb117-adbf-e6bd-938b-8ed109c7692f",
+			"name": "Create Topics Kafka Manager Get Form",
+			"url": "http://{{ip}}:8004/clusters/:c/createTopic",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [
+				{
+					"key": "c",
+					"value": "test"
+				}
+			],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"collectionId": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"headers": "",
+			"pathVariables": {
+				"c": "test"
+			},
+			"collection_id": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"preRequestScript": "",
+			"tests": ""
+		},
+		{
+			"id": "1448de95-5a08-a971-1b90-dded64f51734",
+			"name": "Get broker",
+			"url": "http://{{ip}}:8004/clusters/test/brokers ",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"collectionId": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"headers": "",
+			"pathVariables": {},
+			"collection_id": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"preRequestScript": "",
+			"tests": ""
+		},
+		{
+			"id": "3a3fabd8-297e-e8bf-f95a-f5a99146dd6a",
+			"name": "Get info about one topic",
+			"url": "http://{{ip}}:8083/topics/test",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"collectionId": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"headers": "",
+			"pathVariables": {},
+			"collection_id": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"preRequestScript": "",
+			"tests": ""
+		},
+		{
+			"id": "3f78b44a-245f-a61a-0523-9e31c36ba80c",
+			"name": "Add Cluster",
+			"url": "http://{{ip}}:8004/clusters",
+			"description": "",
+			"data": [
+				{
+					"key": "name",
+					"value": "test123",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "zkHosts",
+					"value": "zookeeper:2181",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "kafkaVersion",
+					"value": "0.9.0.1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "jmxUser",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "jmxPass",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "tuning.brokerViewUpdatePeriodSeconds",
+					"value": "30",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "tuning.clusterManagerThreadPoolSize",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "tuning.clusterManagerThreadPoolQueueSize",
+					"value": "100",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "tuning.kafkaCommandThreadPoolSize",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "tuning.kafkaCommandThreadPoolQueueSize",
+					"value": "100",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "tuning.logkafkaCommandThreadPoolSize",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "tuning.logkafkaCommandThreadPoolQueueSize",
+					"value": "100",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "tuning.logkafkaUpdatePeriodSeconds",
+					"value": "30",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "tuning.partitionOffsetCacheTimeoutSecs",
+					"value": "5",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "tuning.brokerViewThreadPoolSize",
+					"value": "3",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "tuning.brokerViewThreadPoolQueueSize",
+					"value": "1000",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "tuning.offsetCacheThreadPoolSize",
+					"value": "3",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "tuning.offsetCacheThreadPoolQueueSize",
+					"value": "1000",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "tuning.kafkaAdminClientThreadPoolSize",
+					"value": "3",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "tuning.kafkaAdminClientThreadPoolQueueSize",
+					"value": "1000",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				}
+			],
+			"dataMode": "params",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"collectionId": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"headers": "",
+			"pathVariables": {},
+			"collection_id": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"preRequestScript": "",
+			"tests": ""
+		},
+		{
+			"id": "4a71e14d-3606-f89c-71c2-60c6bd77ec7f",
+			"headers": "",
+			"headerData": [],
+			"url": "http://{{ip}}:8081/subjects/Kafka-value/versions/",
+			"folder": null,
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1566500235957,
+			"name": "List all schema versions registered under the subject \"Kafka-value\"",
+			"description": "",
+			"collectionId": "fc5f0e57-feee-37b8-a656-4a03ed61b390"
+		},
+		{
+			"id": "4dfd1871-67b7-b7f9-b84b-6b98fc8c253d",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://{{ip}}:8004/clusters/test/topics/product/addPartitions",
+			"folder": null,
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "topic",
+					"value": "product",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "readVersion",
+					"value": "0",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "partitions",
+					"value": "4",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "brokers[0].id",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "brokers[0].host",
+					"value": "{{ip}}",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "brokers[0].selected",
+					"value": "true",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1566500183394,
+			"name": "Add partitions Kafka Manager",
+			"description": "",
+			"collectionId": "fc5f0e57-feee-37b8-a656-4a03ed61b390"
+		},
+		{
+			"id": "6fe0e544-3d49-96ae-6092-664ffa640e67",
+			"name": " Get a list of topics",
+			"url": "http://{{ip}}:8084/topics/",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"collectionId": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"headers": "",
+			"pathVariables": {},
+			"collection_id": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"preRequestScript": "",
+			"tests": ""
+		},
+		{
+			"id": "75defb4e-a86b-12f0-fc20-d5e485e7dc81",
+			"name": "List Topic Kafka Manager",
+			"url": "http://{{ip}}:8004/clusters/test/topics",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"collectionId": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"headers": "",
+			"pathVariables": {},
+			"collection_id": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"preRequestScript": "",
+			"tests": ""
+		},
+		{
+			"id": "831c3032-4bcb-1478-7ce8-74158a088d07",
+			"name": "Get info about a topic partition",
+			"url": "http://{{ip}}:8084/topics/product455/partitions",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"collectionId": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"headers": "",
+			"pathVariables": {},
+			"collection_id": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"preRequestScript": "",
+			"tests": ""
+		},
+		{
+			"id": "8f6adb7f-289d-9336-189d-ee4889dbd009",
+			"name": "Create Topic Action POST Kafka Manager",
+			"url": "http://{{ip}}:8004/clusters/myCluster/topics/create",
+			"description": "",
+			"data": [
+				{
+					"key": "topic",
+					"value": "product",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "partitions",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "replication",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"collectionId": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {},
+			"collection_id": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"preRequestScript": "",
+			"tests": ""
+		},
+		{
+			"id": "a4bb2875-1c58-b2e3-ab99-0755a60031ac",
+			"name": "Get info about 1 topic",
+			"url": "http://{{ip}}:8084/topics/product455",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"collectionId": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"headers": "",
+			"pathVariables": {},
+			"collection_id": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"preRequestScript": "",
+			"tests": ""
+		},
+		{
+			"id": "af40ab39-0400-e306-cd45-5c52086f3d3c",
+			"headers": "",
+			"headerData": [],
+			"url": "http://{{ip}}:8084/topics/customer",
+			"folder": null,
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": null,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1566499827328,
+			"name": "Get Info About Topic Partions And More",
+			"description": "",
+			"collectionId": "fc5f0e57-feee-37b8-a656-4a03ed61b390"
+		},
+		{
+			"id": "b875a273-5285-94f2-a288-72d587a4949e",
+			"name": "Get broker id content",
+			"url": "http://{{ip}}:8004/clusters/test/brokers/1",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"collectionId": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"headers": "",
+			"pathVariables": {},
+			"collection_id": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"preRequestScript": "",
+			"tests": ""
+		},
+		{
+			"id": "f112053b-4b2b-bd0c-de31-566ed8284101",
+			"name": "Confirm Delete Kafka Manager",
+			"url": "http://{{ip}}:8004/clusters/:c/topics/:t/confirm_delete   ",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [
+				{
+					"key": "c",
+					"value": "test"
+				},
+				{
+					"key": "t",
+					"value": "product455"
+				}
+			],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"collectionId": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"headers": "",
+			"pathVariables": {
+				"c": "test",
+				"t": "product455"
+			},
+			"collection_id": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"preRequestScript": "",
+			"tests": ""
+		},
+		{
+			"id": "f3d9895c-2f20-0e6f-9a35-89feaf4ea4b6",
+			"name": "Delete Topic Kafka Manager",
+			"url": "http://{{ip}}:8004/clusters/test/topics/delete?t=product",
+			"description": "",
+			"data": [
+				{
+					"key": "topic",
+					"value": "product",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "t",
+					"value": "product",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "List",
+					"value": "",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"collectionId": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"headers": "",
+			"pathVariables": {},
+			"collection_id": "fc5f0e57-feee-37b8-a656-4a03ed61b390",
+			"preRequestScript": "",
+			"tests": ""
+		}
+	]
+}
